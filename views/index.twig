@@ -1,0 +1,17 @@
+{% extends "base.twig" %}
+
+{% block content %}
+	<section id="content" role="main" class="content-wrapper">
+        <div class="wrapper layout-well">
+        	{% for event in events %}
+        		{% include ['tease-event.twig', 'tease.twig'] with {post:event} %}
+
+
+        	{% endfor %}
+
+			{% for post in posts %}
+        		{% include 'tease.twig' %}
+    		{% endfor %}
+        </div>
+	</section>
+{% endblock %}

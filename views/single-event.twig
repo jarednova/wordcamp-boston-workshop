@@ -1,0 +1,35 @@
+{% extends "base.twig" %}
+
+{% block content %}
+<section id="content" role="main" class="content-wrapper">
+    <div class="wrapper layout-well">
+        <div class="content-wrapper">
+            <article class="post post-type-post" id="post-1463">
+                <section class="article-content">
+                    <h1 class="article-h1">Event: {{post.post_title}}</h1>
+                    <p class="blog-author">
+                        <span>By</span><a href="{{post.author.link}}"> {{post.author.name}}</a><span>&bull;</span> {{post.post_date|date('l F j, Y')}}
+                    </p>
+                    <div class="article-body">
+                        {{post.content}}
+                    </div>
+                </section>
+
+                <div class="event-meta">
+                    Location: {{post.location}}
+                </div>
+
+                <section class="comments">
+                    <h3 class="h3">Comments</h3>
+                    <div class="respond">
+                        {{comment_form}}
+                    </div>
+                    <div class="responses">
+                                            </div>
+                </section>
+            </article>
+        </div> <!-- /content-wrapper -->
+
+    </div>
+</section>
+{% endblock %}

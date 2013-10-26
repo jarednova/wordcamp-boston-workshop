@@ -1,0 +1,300 @@
+@import "upbase/base";
+@import "upbase/layout";
+@import "upbase/mixins";
+@import "upbase/normalize";
+@import "upbase/reset";
+@import "variables";
+@import "buttons";
+a {
+	color:$orange;
+	text-decoration:none;
+	&:hover {
+		color:darken($yellow, 10) !important;
+	}
+	&:visited {
+		color:$orange;
+	}
+}
+
+.header-logo-link {
+	max-width:100%;
+	width:100%;
+}
+
+.header-logo-img {
+	max-width:100%;
+	width:100%;
+}
+
+.nav-menu {
+	@include pie-clearfix;
+	li {
+		width:25%;
+		float:left;
+		text-align:center;
+		border-right:1px solid darken($yellow, 10);
+		a {
+			padding:10px;
+			text-align:center;
+			color:black(100);
+			font-size:16px;
+			text-transform:uppercase;
+			display:block;
+			@media(min-width:650px){
+				padding-top:30px;
+				padding-bottom:30px;
+			}
+			&:hover {
+				background-color:black;
+				color:white;
+			}
+		}
+	}
+}
+
+.header {
+	background-color:$yellow;
+	.wrapper {
+		@media (min-width:650px){
+			@include cols(2, 40%, 60%);
+			.col-1 {
+				max-width:480px;
+			}
+		}
+
+	}
+}
+
+body {
+	font-family:$titillium;
+}
+
+.h1, .h1, .h3, .h4 {
+	font-family:$titillium;
+}
+
+.h3 {
+	text-transform:uppercase;
+	font-size:18px;
+	font-weight:900;
+}
+
+.comments {
+	width:70%;
+	margin:auto;
+	.h3 {
+		margin-bottom:15px;
+	}
+}
+
+#respond {
+	padding:20px;
+	background-color:black(5);
+	border:1px solid black(10);
+	margin:auto;
+}
+
+.article-h1 {
+	font-family:$titillium;
+	font-size:24px;
+	margin-bottom:15px;
+	@media (min-width:650px) {
+		font-size:48px;
+	}
+}
+ 
+.article-body {
+	font-size:16px;
+	line-height:180%;
+	margin-bottom:20px;
+	font-family:Georgia;
+	p, li {
+		
+		margin-bottom:8px;
+	}
+}
+
+.article-content {
+	margin-bottom:80px;
+}
+
+.article-meta {
+	border-top:1px solid black(50);
+	border-bottom:1px solid black(50);
+	padding:10px;
+	font-size:16px;
+	background-color:black(5);
+}
+
+.blog-author {
+	margin-bottom:20px;
+}
+
+.content-wrapper {
+	margin:auto;
+	width:90%;
+}
+
+.post {
+	padding-top:50px;
+}
+
+.section-header {
+	font-size:36px;
+	font-family:Georgia;
+	font-weight:normal;
+}
+
+.recent-events {
+	padding-top:20px;
+	margin-bottom:80px;
+}
+
+.recent-posts {
+	padding-top:20px;
+}
+
+.tease {
+	margin-bottom:5px;
+	padding:30px 0px;
+	border-bottom:8px solid black(6);
+	.h2 {
+		font-size:24px;
+		margin-bottom:10px;
+		@media (min-width:650px){
+			font-size:34px;
+		}
+		a {
+			color:black;
+		}
+	}
+	img {
+		max-width:100%;
+	}
+	.tease-body {
+		font-size:16px;
+		line-height:150%;
+	}
+	.tease-thumb {
+		border:1px solid black(10);
+		margin-bottom:20px;
+	}
+
+}
+
+#content {
+	padding-top:40px;
+	padding-bottom:80px;
+}
+
+.footer {
+	padding:20px;
+	background-color:black;
+	color:white;
+	text-align:center;
+}
+
+.blog-comment {
+	@include cols(2, 30%, 70%);
+	border-bottom:1px solid black(10);
+	padding:20px 10px;
+}
+
+.featured-member {
+	position:relative;
+	display:block;
+	@media(min-width:650px){
+	}
+	img {
+		display:block;
+		width:100%;
+		max-width:100%;
+	}
+	.member-title {
+		position:absolute;
+		bottom:0px;
+		left:20px;
+		background-color:rgba(black, 0.8);
+		color:white;
+		font-size:36px;
+		z-index:100;
+		padding:20px 20px 40px;
+	}
+
+}
+.layout-stream {
+	@media(min-width:700px){
+		width:65%;
+		float:left;
+		margin-right:5%;
+	}
+}
+
+.layout-sidebar {
+	@media(min-width:700px){
+		width:25%;
+		float:left;
+		margin-left:5%;
+		padding-top:30px;
+	}
+}
+
+#content {
+	@include pie-clearfix;
+}
+
+
+
+.member-square {
+	display:block;
+	padding:5px;
+	border:1px solid black(10);
+	img {
+		max-width:100%;
+		width:100%;
+	}
+	width:45%;
+	margin:2.5%;
+	float:left;
+}
+
+#reply-title {
+		display:none;
+	}
+
+.comment-form {
+	@include pie-clearfix;
+	
+	.logged-in-as {
+		@media(min-width:600px){
+			float:left;
+			width:25%;
+		}
+		display:none;
+	}
+	#comment {
+		width:100%;
+		padding:20px;
+		font-size:16px;
+		line-height:170%;
+	}
+	.comment-form-comment {
+		label {
+			display:none;
+		}
+	}
+	.form-allowed-tags {
+		display:block;
+		padding-top:20px;
+		font-size:12px;
+		font-family:Consolas, monospace;
+		color:black(60);
+	}
+	.form-submit {
+		padding-top:8px;
+	}
+	input[type="submit"] {
+		float:right;
+		@include btn();
+	}
+}

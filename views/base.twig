@@ -1,0 +1,52 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js ie ie6 lt-ie9 lt-ie8 lt-ie7" lang="lang="en-US""> <![endif]-->
+<!--[if IE 7]><html class="no-js ie ie7 lt-ie9 lt-ie8" lang="lang="en-US""> <![endif]-->
+<!--[if IE 8]><html class="no-js ie ie8 lt-ie9" lang="lang="en-US""> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en-US"> <!--<![endif]-->
+    <head>
+    <meta charset="UTF-8" />
+    <title>SiteName - Post Title!</title>
+    <meta name="description" content="Site description here">
+    <link rel="stylesheet" href="/wp-content/themes/bostonbuilt/css/screen.css" type="text/css" media="screen" />
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,900,200,700italic,400italic,200italic' rel='stylesheet' type='text/css'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{wp_head}}
+
+</head>
+<body class="single single-post postid-1447 single-format-standard" data-source="base.twig">
+    <header class="header" >
+        <div class="wrapper">
+
+            <h1 class="hdr-logo col-1" role="banner">
+                <a class="header-logo-link" href="/" title="Timber" rel="home"><img src="/wp-content/themes/bostonbuilt/images/bb-logo.png" class="header-logo-img"></a>
+            </h1>
+
+            <nav id="access" class="ink-navigation col-2" role="navigation">
+                <div class="menu-header">
+                    <ul id="menu-primary-navigation" class="nav-menu">
+                        {% for item in menu.get_items %}
+                            <li id="menu-item-1448" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-1448"><a href="{{item.link}}">{{item.name}}</a></li>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </nav><!-- #access -->
+        </div>
+    </header>
+
+    {% block content %}
+        Sorry, no content found
+    {% endblock %}
+
+
+
+      <footer class="footer">
+        {{calendar}}
+        Copyright {{"now"|date('Y')}}
+    </footer>
+    {{wp_footer}}
+    
+    <script src="/wp-content/themes/bostonbuilt/js/boston-built.js"></script>
+</body>
+</html>
